@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RightLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/center_point" >
+
+        <TextView
+            android:id="@+id/joinGameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join an existing game!" />
+        
+        <TextView
+            android:id="@+id/joinerUsernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/joinGameText"
+            android:text="" />
+
+        <RelativeLayout
+            android:id="@+id/InnerRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <Button
+                android:id="@+id/joinGameButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Join a Game" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/joinGameCancelButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:minHeight="8dip"
+            android:text="Cancel" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/center_point"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/LeftLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/center_point" >
+
+        <TextView
+            android:id="@+id/newGameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start a New Game!"
+            tools:context=".StartScreen" />
+
+        <TextView
+            android:id="@+id/creatorUsernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newGameText"
+            android:text="" />
+        
+        <TextView
+            android:id="@+id/playersWaiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/creatorUsernameText"
+            android:text="" />
+
+        <RelativeLayout
+            android:id="@+id/InnerRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <Button
+                android:id="@+id/newGameButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Create a Game" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/newGameCancelButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:minHeight="8dip"
+            android:text="Cancel" />
+    </RelativeLayout>
+
+</RelativeLayout>
